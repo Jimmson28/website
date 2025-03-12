@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="style_home_pages.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub "Kuba" Dorsz</title>
+</head>
+<body>
+    <img src="me.jpg" class="top-left-image">
+    <h2>Welcome <?php echo $_SESSION["username"]; ?></h2>
+    <form action="home.php" method="post">
+        <input type="submit" name="Logout" value="Logout">
+    </form>
+    <nav>
+        <ul class="tabs">
+            <li><a href="home.html" >What's about me</a></li>
+            <li><a href="projects.html" >My Projects</a></li>
+        </ul>
+    </nav>
+    <div class="me">
+        <h3>Podstawowe informacje</h3>
+        <ul>
+            <label>Mam 21 lat</label><br>
+            <label>Pochodzę z borów tucholskich</label><br>
+            <Label>Fan Star Wars oraz lojalny kibic zespołu Williamsa F1</Label><br>
+            <label>Studiuję elektronikę i telekomunikację na PG</label><br>
+            <label>Moją specialnością są sieci teleinformacyjne</label><br>
+            <label>Lubię rozwiązywać problemy, potrzebna mi tylko wiara</label><br>
+            <label>Lubię dostać oraz obdarować drugą osobę dobrym memem</label><br>
+        </ul>
+        <h3>Trochę głębiej</h3>
+        <ul class="moreaboutme">
+            <label>W czasach licealnych (tak, skończyłem liecum ogólnokształcące), zainteresowałem się programowaniem. Oglądając różne tutoriale/kursy zdobyłem jakąś podstawową wiedzę (albo jakiś jej ułamek)(był to Python i Java).Z tego względu iż od dziecka miałem dobre stopnie z matematyki czy fizyki oraz interesowałem się tym jak działa cały świat elektrotechniczy, zdecydowałem że odpowiednim kierunkiem dla mnie będzie Politechnika Gdańska, gdzie chciałem studiować informatykę, jednak końcowo wybrałem EiT, ponieważ chciałem posiąść jak najwięcej wiedzy o tym jak wszystko na tym świecie wspólnie się komunikuję/działa razem a po godzinach pracy hobbystycznie programować. Intryguje oraz fascynuje mnie to co może przynieść kolejny dzień, wydaje się że lada chwila nastąpi przełom w świecie technoligii. Chciałbym dołożyć swoją cegiełkę w tym procesie i swoją pracą przyczynić się że coś na tym świecie będzie działać lepiej, szybciej i efektywniej</label><br>
+        </ul>
+
+    </div>
+</body>
+</html>

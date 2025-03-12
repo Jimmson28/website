@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="style_home_pages.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakub "Kuba" Dorsz</title>
+</head>
+<body>
+    <img src="me.jpg" class="top-left-image">
+    <h2>Welcome <?php echo $_SESSION["username"]; ?></h2>
+    <form action="home.php" method="post">
+        <input type="submit" name="Logout" value="Logout">
+    </form>
+    <nav>
+        <ul class="tabs">
+            <li><a href="home.html"  >What's about me</a></li>
+            <li><a href="projects.html" >My Projects</a></li>
+        </ul>
+    </nav>
+    <div class="me">
+        <h2>Moje projekty oraz projekty w których brałem udział</h2>
+        <ul><li><b>Social Appliaction called Space</b></li></ul>
+        <ul>
+            <label>Około pół roku temu na przełomie października/listopada 2024 roku, po przeczytaniu raportu dotyczącego rynku IT zdecydowałem się że zacznę w wolnych chwilach uczyć się JavaScript'u. Wpadłem na pomysł żeby w celu nauki stworzyć własnego "Instagrama", i tak oto powstał "Space-Got a Space for You" wykonany w technologii ReactNative. Jest to mój własny projekt który służył i dalej służy do nauki (chcę dodać kolejne funkcjonalości jak chat oraz rozmowy wideo).</label><br>
+        </ul>
+        <div class="container">
+            <img src="Space/home.jpg">
+            <img src="Space/photo.jpg">
+            <img src="Space/addpost.jpg">
+            <img src="Space/profile.jpg">
+            <img src="Space/signin.jpg">
+            <img src="Space/signup.jpg">
+        </div>
+        <ul><li><b>Sieć BAN monitorująca parametry życiowe osób starszych i przewlekle chorych - Projekt Grupowy PG</b></li></ul>
+        <ul>
+            <label>Razem z trojgiem znajomych podjeliśmy się storzenia radiowej sieci BAN monitorującej funkcje życiowe pacjenta, założeniami projektu było stworzenie jednostki centralnej komunikującej się z czujnikami oraz aplikacją na smartphonie. Dane zebrane przez czujniki miały być wyświetlane w przyjaznej formie w aplikacji. Mój partner i ja byliśmy odpowiedzialny za jej rozwój (Technologia - ReactNative). Aplikacja posiada profil pacjenta, zakładkę z danymi zdrowotnymi, zakładkę w której użytkownik zamieszcza wpisy dotyczące samopoczucia - Projekt w fazie rozwoju</label><br>
+        </ul>
+        <div class="container">
+            <img src="Screens/WelcomeScreen.jpg">
+            <img src="Screens/HealthDataScreen.jpg">
+            <img src="Screens/FeelingsScreen.jpg">
+            <img src="Screens/FeelingsScreen2.jpg">
+            <img src="Screens/DataScreen.jpg">
+            <img src="Screens/EditionScreen.jpg">
+        </div>
+        <ul><li><b>Gra termianlowa Sokoban</b></li></ul>
+        <ul>
+            <label>Na pierszym roku studiów na przedmiocie Podstawy Programowania miałem do zrealizowania projekt w języku C++, było nim napisanie prostej gry Sokoban</label><br>
+        </ul>
+        <div class="container">
+            <img src="Sokoban/1.png">
+            <img src="Sokoban/2.png">
+            <img src="Sokoban/3.png">        
+        </div>
+        <ul><li><b>Gra RapBattle</b></li></ul>
+        <ul><label>Podczas 5. semestru studiów na przedmiocie JPWP (języki programowania wysokiego poziomu) miałem do zrealizowania projekt stworzenia gry typu Seaious Games o własnej tematyce. Zdecydowałem się storzyć interaktywną grę w której użytkownich wciela się w rapera i bierze udział w bitwach freestylowych. Gra została wykonana w technologii C#</label></ul>
+        <div class="container">
+            <img src="RapBattle/1.png">
+            <img src="RapBattle/2.png">
+            <img src="RapBattle/3.png">        
+        </div>
+    </div>
+    <script>
+        const images = document.querySelectorAll('.container img');
+        let largedImage = null;
+
+        images.forEach(img => {
+        img.addEventListener('click', () => {
+            if (img.classList.contains('fullscreen')) {
+            img.classList.remove('fullscreen');
+            largedImage = null;
+            } else {            
+            if (largedImage) {
+                largedImage.classList.remove('fullscreen');
+            }
+            img.classList.add('fullscreen');
+            largedImage = img;
+            }
+        });
+        });
+</script>
+</body>
+</html>
