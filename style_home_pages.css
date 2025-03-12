@@ -73,7 +73,7 @@ nav {
 }
 
 .me {
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 800px;
     padding: 20px;
     background-color: white;
@@ -92,7 +92,7 @@ ul {
 
 label {
     display: block;
-    margin: 10px 0;
+    
 }
 
 .top-left-image {
